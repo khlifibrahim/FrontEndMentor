@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo App</title>
+</head>
+<body>
+    <img src="images/bg-desktop-dark.jpg" class="bg">
+    <div class="containe">
+        <div class="header">
+            <h1>TODO</h1>
+            <div class="dark-mode">
+                <img src="images/icon-moon.svg" alt="">
+            </div> 
+        </div>
+        <div class="add-task">
+            <div class="check">
+                <img src="images/icon-check.svg" alt="">
+            </div>
+            <input type="text" placeholder="Create a new todo">
+        </div>
+        <div class="body-task">
+            
+            <div class="tasks">
+                
+            </div>
+
+            <div class="task-footer">
+                <p class="items-counter">0 items left</p>
+                <div class="container">
+                    <p id="all">All</p>
+                    <p id="active">Active</p>
+                    <p id="completed">Completed</p>
+                </div>
+                <p class="clear-completed">Clear Completed</p>
+            </div>
+
+        </div>
+
+        <p class="drag-drop">Drag and drop to reorder list</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

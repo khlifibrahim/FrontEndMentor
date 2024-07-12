@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/Poppins-Bold.ttf">
+    <link rel="stylesheet" href="fonts/Poppins-BoldItalic.ttf">
+    <link rel="stylesheet" href="fonts/Poppins-ExtraBold.ttf">
+    <link rel="stylesheet" href="fonts/Poppins-ExtraBoldItalic.ttf">
+    <link rel="stylesheet" href="fonts/Poppins-Italic.ttf">
+    <link rel="stylesheet" href="fonts/Poppins-Regular.ttf">
+    <title>Project 12 - Age Calculator</title>
+</head> 
+<body>
+    <div class="container">
+        <div class="inputs section">
+            <div class="box day">
+                <p class="title">DAY</p>
+                <input type="text" placeholder="DD" id="date" maxlength="2">
+                <p class="error">This field is required</p>
+            </div>
+            <div class="box month">
+                <p class="title">MONTH</p>
+                <input type="text" placeholder="MM" id="month" maxlength="2">
+                <p class="error">This field is required</p>
+            </div>
+            <div class="box year">
+                <p class="title">YEAR</p>
+                <input type="text" placeholder="YYYY" id="year" maxlength="4">
+                <p class="error">This field is required</p>
+            </div>
+        </div>
+        <div class="submit section">
+            <span></span>
+            <button>
+                <img src="img/icon-arrow.svg" alt="">
+            </button>
+        </div>
+        <div class="result section">
+            <div id="resultYear"><p>--</p> years</div>
+            <div id="resultMonth"><p>--</p> months</div>
+            <div id="resultDay"><p>--</p> days</div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

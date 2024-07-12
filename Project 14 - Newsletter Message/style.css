@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('/assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+:root {
+    /* ## Colors */
+
+        /* ### Primary */
+
+        --Tomato: hsl(4, 100%, 67%);
+        
+        --Orange:hsl(15, 100%, 61%);
+        --pinky:hsl(346, 100%, 66%);
+
+        /* ### Neutral */
+
+        --Dark-Slate-Grey: hsl(234, 29%, 20%);
+        --Charcoal-Grey: hsl(235, 18%, 26%);
+        --Grey: hsl(231, 7%, 60%);
+        --White: hsl(0, 0%, 100%);
+
+    /* ## Typography */
+
+        --Font-fmly: 'Roboto Regular';
+        --Font-size-paragraph: 16px;
+        --Font-400: 400;
+        --Font-700: 700;
+}
+
+body {
+    background-color: var(--Charcoal-Grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: var(--Font-fmly);
+}
+
+.container {
+    background-color: var(--White);
+    width: 70% ;
+    /* width: 360px ; */
+    max-width: 820px;
+    border-radius: 1.8rem;
+    display: flex;
+    padding: 16px;
+    /* padding: 2rem; */
+    transition: .3s ease;
+}
+
+.container .containe:nth-child(2) {
+    flex:0 0 40%;
+}
+
+.container .containe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .content {
+    margin: 2rem 1rem;
+    padding: 0 2rem;
+}
+
+.container .content h1,
+.container .Success-Message h1{
+    font-family: 'Roboto Bold' !important;
+    font-weight: var(--Font-700);
+    color: var(--Charcoal-Grey);
+    font-size: 52px;
+    line-height: 15px;
+    padding-bottom: 8px;
+}
+
+.container .content p,
+.container .Success-Message p {
+    font-size: 16px;
+    color: var(--Charcoal-Grey);
+}
+
+.container .content .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .content .list li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 8px 0;
+    color: var(--Dark-Slate-Grey);
+}
+
+.container .content .list li span{
+    margin-right: 12px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(assets/images/icon-list.svg);
+    background-size: cover;
+}
+
+.container .content .form {
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+.container .content .form .text {
+    display: flex;
+    justify-content:space-between ;
+    font-weight: var(--Font-700);
+}
+
+.container .content .form p{
+    font-size: 14px;
+    line-height: .5px;
+}
+
+.container .content .form .alert {
+    display: none;
+    color: var(--Tomato);
+}
+
+
+
+.container .content .form input ,
+.container .content .form button,
+.container .Success-Message button {
+    height: 52px;
+    border-radius: 8px;
+    
+    
+}
+
+.container .content .form input {
+    border: 1px solid var(--Grey);
+    outline: none;
+    padding:0 8px;
+    margin-bottom: 20px;
+}
+.container .content .form input:focus {
+    border-color: var(--Dark-Slate-Grey);
+}
+
+.container .content .form button,
+.container .Success-Message button {
+    width: 100%;
+    background-color: var(--Charcoal-Grey);
+    color: var(--White);
+    font-weight: var(--Font-700);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.container .content .form button:hover,
+.container .Success-Message button:hover {
+    background: linear-gradient(to left ,var(--Orange) 30%, var(--pinky) 100%);
+}
+
+.container .Success-Message h1{
+    line-height: 1;
+}
+
+.container .Success-Message button {
+    margin-top: 1rem;
+}
+
+
+.error {
+    border-color: var(--Tomato) !important;
+    background-color: hsla(4, 100%, 67%, 0.25);
+    color: var(--Tomato);
+}
+.show {
+    display: block !important;
+}
+
+.hidde {
+    display: none;
+}

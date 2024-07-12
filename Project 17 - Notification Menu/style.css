@@ -1,0 +1,159 @@
+:root {
+
+    /* ### Primary */
+
+        --Red: hsl(1, 90%, 64%);
+        --Blue: hsl(219, 85%, 26%);
+
+    /* ### Neutral */
+
+        --White: hsl(0, 0%, 100%);
+        --Very-light-grayish-blue: hsl(210, 60%, 98%);
+        --Light-grayish-blue-1: hsl(211, 68%, 94%);
+        --Light-grayish-blue-2: hsl(205, 33%, 90%);
+        --Grayish-blue: hsl(219, 14%, 63%);
+        --Dark-grayish-blue: hsl(219, 12%, 42%);
+        --Very-dark-blue: hsl(224, 21%, 14%);
+
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    transition: ease .4s;
+}
+
+body {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 100vh; */
+    background-color: var(--Very-light-grayish-blue);
+}
+
+img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+}
+
+.container {
+    /* max-width: 50%; */
+    width: 600px;
+    background-color: var(--White);
+    padding: 2rem;
+    border-radius: 24px;
+}
+
+.container .header, 
+.container .header h1, 
+.container .body .notification,
+.container .body .notification .comment {
+    display: flex;
+}
+
+.container .header {
+    padding: 1.8rem 0;
+    justify-content: space-between;
+}
+.container .header h1 {
+    display: flex;
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+.container .header h1 .counter {
+    font-size: 12px;
+    /* line-height: 2; */
+    color: var(--White);
+    background-color: var(--Blue);
+    padding: 4px 12px;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+.container .header p:not(.counter) {
+    /* font-size: 18px; */
+    color: var(--Very-dark-blue);
+    cursor: pointer;
+}
+.container .header p:not(.counter):hover {
+    color: var(--Blue);
+}
+
+.container .body .notification {
+    align-items: center;
+    padding: 12px 24px;
+    margin: 8px 0;
+    color: var(--Very-dark-blue);
+    border-radius: 12px;
+    cursor: pointer;
+}
+.container .body .read {
+    background-color: transparent;
+}
+.container .body .new {
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.container .body .notification .avatar {
+    margin-right: 24px;
+}
+
+
+.container .body .notification .notif-text b {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    /* font-size: 18px; */
+    cursor: pointer;
+}
+
+.container .body .notification .notif-text span{
+    color: var(--Grayish-blue);
+    /* font-size: 18px; */
+    font-weight: 800;
+}
+.notification .notif-text span.post {
+    color: var(--Grayish-blue);
+    cursor: pointer;
+}
+.container .body .notification .notif-text b:hover,
+.notification .notif-text span.post:hover {
+    color: var(--Blue) ;
+}
+.notification .notif-text span.group {
+    color: var(--Blue) !important;
+    cursor: pointer;
+}
+
+.container .body .notification .notif-text .date{
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    margin-top: 8px;
+}
+.container .body .notification .comment {
+    width: 100%;
+    justify-content: space-between;
+}
+.container .body .notification .content .message{
+    /* width: 80%; */
+    margin-top: 12px;
+    padding: 1rem;
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: 4px;
+    /* font-size: 18px; */
+    cursor: pointer;
+}
+
+.container .body .notification .content .message:hover{
+    background: var(--Light-grayish-blue-2)
+};
+
+
+.red-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--Red);
+}
