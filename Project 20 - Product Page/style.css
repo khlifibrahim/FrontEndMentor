@@ -59,10 +59,10 @@ nav .logo {
 nav .menu {
     display: flex;
 }
-/* nav .mobile-menu,
+nav .mobile-menu,
 nav .menu .close {
     display: none;
-} */
+}
 nav .menu li {
     color: var(--Grayish-blue);
     padding: 45px 0;
@@ -206,6 +206,7 @@ nav .user .cart button {
         border-bottom: unset
     }
     nav .mobile-menu {
+        display:block;
         margin-right: 16px;
     }
     nav .menu {
@@ -232,6 +233,7 @@ nav .user .cart button {
         font-weight: 800;
     }
     nav .menu .close {
+        display:block;
         padding: 12px 0;
         margin: 0 16px;
     }
