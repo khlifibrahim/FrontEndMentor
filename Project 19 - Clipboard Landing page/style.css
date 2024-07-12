@@ -1,0 +1,270 @@
+:root {
+
+    /* ## Colors */
+
+    /* ### Primary */
+
+        --Strong-Cyan: hsl(171, 66%, 44%);
+        --Light-Blue: hsl(233, 100%, 69%);
+
+    /* ### Neutral */
+
+        --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+        --Grayish-Blue: hsl(201, 11%, 66%);
+
+    /* ## Typography */
+
+        --Font-size: 18px;
+
+}
+
+/* Default Values */
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main, .container {
+    margin: 0 6rem;
+}
+a {
+    text-decoration: none;
+    color: var(--Grayish-Blue);
+    font-family: 'Bai Jamjuree' ;
+    font-weight: 600;
+}
+header, section {
+    /* margin: 0 4rem; */
+    padding: 4rem 0;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: var(--Font-size);
+    text-align: center;
+}
+
+.btns button {
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px ;
+    height: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+.btns button:hover {
+    filter: contrast(70%);
+}
+.btns button.ios {
+    background-color: var(--Strong-Cyan);
+    margin-right: 4px;
+    box-shadow: 0 8px 14px hsl(171deg 66% 44% / 20%);
+}
+.btns button.mac {
+    background-color: var(--Light-Blue);
+    margin-left: 4px;
+    box-shadow: 0 8px 14px hsl(233deg 100% 69% / 20%);
+}
+
+h1,h2 {
+    margin: 2.4rem 0 .6rem;
+    color: var(--Dark-Grayish-Blue);
+}
+h1 {
+    font-size: 2.2rem;
+}
+p {
+    color: var(--Grayish-Blue);
+}
+
+/* ---------------------------------- */
+
+header{
+    background-image: url(images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+header .hero h1,
+.cta-install .content h1{
+    margin: 2.4rem 0 .6rem;
+    font-size: 2.2rem;
+}
+header .hero p,
+.cta-install .content p {
+    width: 580px;
+    margin-bottom: 2rem;
+}
+
+.about {
+    gap: 4rem;
+}
+
+.about .content:nth-child(1) p,
+.about-2 .box p{
+    width: 700px;
+}
+.about .content:nth-child(2),
+.about-3 .content:nth-child(2) {
+    display: flex;
+    gap: 6rem;
+    width: 100%;
+}
+.about .content:nth-child(2) .box:nth-child(1){
+    margin-left: -8rem;
+}
+.about .content:nth-child(2) .box:nth-child(1) img{
+    object-fit: contain;
+}
+.about .content:nth-child(2) .box:nth-child(2){
+    text-align: left;
+}
+.about .content:nth-child(2) .box:nth-child(2) .features  {
+    margin-top: 4rem;
+}
+.about .content:nth-child(2) .box:nth-child(2) .features p {
+    width: 380px;
+}
+
+
+.about-2, .about-3 {
+    gap: 6rem;
+}
+
+.about-3 .content:nth-child(2){
+    justify-content: space-around;
+    gap: unset;
+}
+.about-3 .features p {
+    width: 380px;
+}
+
+
+.companies {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cta-install .content p {
+    width: 680px !important;
+}
+
+
+footer {
+    padding: 2rem 0;
+    background-color:  hsla(202, 11%, 66%, 0.2);
+}
+footer .container {
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-around;
+    align-items: center;
+}
+footer .container img {
+    width: 64px;
+    margin-right: 4rem;
+}
+footer .container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: auto;
+    align-items: center;
+}
+footer .container li {
+    list-style-type: none;
+    margin: 0 1rem;
+}
+footer .container li a:hover {
+    color: var(--Strong-Cyan);
+}
+
+footer .container .row li {
+    list-style-type: none;
+    margin: .5rem 4rem;
+}
+footer .container li svg:hover path{
+    fill: var(--Strong-Cyan);
+}
+
+
+@media screen and (max-width:375px) {
+    p {
+        width: unset !important;
+    }
+    header {
+        background-image: url(images/bg-header-mobile.png);
+    }
+    
+    header .hero p {
+        padding: 0 14px;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+        width: 90%;
+    }
+
+    main, .container {
+        margin: 0 1rem;
+    }
+
+    .about .content:nth-child(2),
+    .about-3 .content:nth-child(2) {
+        flex-direction: column;
+        gap: unset;
+        width: 100%;
+    }
+    .about-3 .content:nth-child(2) {
+        gap: 3rem;
+    }
+    .about .content:nth-child(2) .box:nth-child(1) {
+        margin-left: unset;
+    }
+    .about .content:nth-child(2) .box:nth-child(2) {
+        text-align: center;
+    }
+
+    .about img, .about-2 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .companies {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .cta-install .content p {
+        width: unset !important;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    footer .container img {
+        margin-right: unset;
+    }
+    footer .container ul {
+        grid-template-columns: 1fr;
+        margin-left: unset;
+    }
+    footer .container .row li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    footer .container #sm {
+        display: flex;
+        margin: 1rem 0;
+    }
+}
